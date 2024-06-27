@@ -38,8 +38,9 @@ const factores = {
     }
 };
 
+// Capturar el evento de envío del formulario
 document.getElementById('formulario').addEventListener('submit', function(e) {
-    e.preventDefault();
+    e.preventDefault(); // Prevenir el envío del formulario por defecto
 
     // Obtener valores seleccionados
     const datos = {
@@ -77,3 +78,4 @@ document.getElementById('formulario').addEventListener('submit', function(e) {
     // Mostrar el resultado en la página
     document.getElementById('resultado').innerText = `TSI Estimado: ${tsi.toFixed(2)}`;
 });
+
