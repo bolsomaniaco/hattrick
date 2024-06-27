@@ -55,20 +55,24 @@ document.getElementById('formulario').addEventListener('submit', function(e) {
         edad: document.getElementById('edad').value
     };
 
-    // Calcular el TSI (ejemplo simplificado)
-    const tsi = pesos[datos.velocidad] +
-                pesos[datos.resistencia] +
-                pesos[datos.tecnica] +
-                pesos[datos.defensa] +
-                pesos[datos.ataque] +
-                pesos[datos.pase] +
-                pesos[datos.porteria] +
-                pesos[datos.forma] +
-                pesos[datos.experiencia] +
-                pesos[datos.confianza] +
-                pesos[datos.estado] +
-                pesos[datos.edad];
+    // Calcular el TSI
+    let tsi = habilidades[datos.velocidad] +
+              habilidades[datos.resistencia] +
+              habilidades[datos.tecnica] +
+              habilidades[datos.defensa] +
+              habilidades[datos.ataque] +
+              habilidades[datos.pase] +
+              habilidades[datos.porteria];
+
+    // Aplicar factores adicionales
+    tsi += factores.forma[datos.forma]; // Suma el factor de forma
+    tsi *= factores.resistencia; // Multiplica por el factor de resistencia
+
+    // Ajuste por edad
+    if (datos.edad === 'mas_de_28') {
+        tsi *= factores.edad.mas_de_28; // Reduce el TSI por edad
+    }
 
     // Mostrar el resultado en la página
-    document.getElementById('resultado').innerText = `TSI Estimado: ${tsi}`;
+    document.getElementById('resultado').innerText = `TSI Estimado: ${tsi.toFixed(2)}`;
 });
