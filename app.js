@@ -54,6 +54,12 @@ document.getElementById('formulario').addEventListener('submit', function(e) {
         forma: document.getElementById('forma').value,
         edad: document.getElementById('edad').value
     };
+    
+    // Verificar si algún campo está vacío o no seleccionado
+    if (Object.values(datos).some(valor => valor === "")) {
+        alert("Por favor, selecciona un valor para todas las características.");
+        return; // Detener la ejecución si hay campos vacíos
+    }
 
     // Calcular el TSI
     let tsi = habilidades[datos.velocidad] +
@@ -78,4 +84,3 @@ document.getElementById('formulario').addEventListener('submit', function(e) {
     // Mostrar el resultado en la página
     document.getElementById('resultado').innerText = `TSI Estimado: ${tsi.toFixed(2)}`;
 });
-
