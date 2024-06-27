@@ -47,10 +47,22 @@ function cargarOpciones() {
     });
 }
 
-// Llamar a la función para cargar opciones cuando se cargue la página
-document.addEventListener('DOMContentLoaded', cargarOpciones);
+const factores = {
+    forma: {
+        excelente: 5,
+        bueno: 3,
+        aceptable: 1,
+        insuficiente: 0,
+        debil: -1,
+        horrible: -3
+    },
+    resistencia: 1.5,
+    edad: {
+        menos_de_28: 1,
+        mas_de_28: 0.9
+    }
+};
 
-// Evento para calcular el TSI cuando se envía el formulario
 document.getElementById('formulario').addEventListener('submit', function(e) {
     e.preventDefault();
     
@@ -68,22 +80,25 @@ document.getElementById('formulario').addEventListener('submit', function(e) {
     };
 
     // Calcular el TSI
-    let tsi = 0;
-    let contador = 0;
+    let tsi = habilidades[datos.velocidad] +
+              habilidades[datos.resistencia] +
+              habilidades[datos.tecnica] +
+              habilidades[datos.defensa] +
+              habilidades[datos.ataque] +
+              habilidades[datos.pase] +
+              habilidades[datos.porteria];
 
-    Object.keys(datos).forEach(key => {
-        const valor = datos[key];
-        if (valor !== '') {
-            tsi += habilidades[valor];
-            contador++;
-        }
-    });
+    // Aplicar factores adicionales
+    tsi += factores.forma[datos.forma]; // Suma el factor de forma
+    tsi *= factores.resistencia; // Multiplica por el factor de resistencia
 
-    // Calcular promedio
-    if (contador > 0) {
-        tsi /= contador;
+    // Ajuste por edad
+    if (datos.edad === 'mas_de_28') {
+        tsi *= factores.edad.mas_de_28; // Reduce el TSI por edad
+    } else {
+        tsi *= factores.edad.menos_de_28; // Ajuste por edad menor de 28
     }
 
-    // Mostrar resultado
+    // Mostrar el resultado en la página
     document.getElementById('resultado').innerText = `TSI Estimado: ${tsi.toFixed(2)}`;
 });
