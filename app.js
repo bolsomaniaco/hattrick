@@ -1,13 +1,20 @@
 document.getElementById('formulario').addEventListener('submit', function(e) {
     e.preventDefault();
     const datos = {
-        velocidad: document.getElementById('velocidad').value,
-        resistencia: document.getElementById('resistencia').value,
-        tecnica: document.getElementById('tecnica').value,
-        defensa: document.getElementById('defensa').value,
-        ataque: document.getElementById('ataque').value,
+        velocidad: parseInt(document.getElementById('velocidad').value),
+        resistencia: parseInt(document.getElementById('resistencia').value),
+        tecnica: parseInt(document.getElementById('tecnica').value),
+        defensa: parseInt(document.getElementById('defensa').value),
+        ataque: parseInt(document.getElementById('ataque').value),
+        pase: parseInt(document.getElementById('pase').value),
+        porteria: parseInt(document.getElementById('porteria').value)
     };
-    // Simular el cálculo del TSI (esto es solo un ejemplo)
-    const tsi = (parseInt(datos.velocidad) + parseInt(datos.resistencia) + parseInt(datos.tecnica) + parseInt(datos.defensa) + parseInt(datos.ataque)) * 100;
-    document.getElementById('resultado').innerText = 'TSI Estimado: ' + tsi;
+
+    // Calcular las características del jugador (ejemplo básico)
+    const sumaCaracteristicas = datos.velocidad + datos.resistencia + datos.tecnica + datos.defensa + datos.ataque + datos.pase + datos.porteria;
+    const promedioCaracteristicas = sumaCaracteristicas / 7; // Calcula el promedio de las características
+    const redondeado = Math.round(promedioCaracteristicas * 100) / 100; // Redondea el promedio a dos decimales
+
+    // Mostrar el resultado en la página
+    document.getElementById('resultado').innerText = `Promedio de Características: ${redondeado}`;
 });
