@@ -39,7 +39,7 @@ document.getElementById('formulario').addEventListener('submit', function(e) {
         edad: document.getElementById('edad').value
     };
 
-    // Convertir los valores seleccionados a números utilizando el objeto habilidades
+    // Calcular las características del jugador (ejemplo básico)
     const sumaCaracteristicas = habilidades[datos.velocidad] +
                                 habilidades[datos.resistencia] +
                                 habilidades[datos.tecnica] +
