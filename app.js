@@ -1,45 +1,60 @@
+// Objeto de habilidades con orden de menor a mayor
 const habilidades = {
-    divino: 20,
-    utopico: 19,
-    magico: 18,
-    mitico: 17,
-    extraterrestre: 16,
-    titanico: 15,
-    sobrenatural: 14,
-    clase_mundial: 13,
-    magnifico: 12,
-    brillante: 11,
-    destacado: 10,
-    formidable: 9,
-    excelente: 8,
-    bueno: 7,
-    aceptable: 6,
-    insuficiente: 5,
-    debil: 4,
-    pobre: 3,
-    horrible: 2,
-    desastroso: 1,
-    nulo: 0
+    nulo: -5,
+    desastroso: -4,
+    horrible: -3,
+    pobre: -2,
+    debil: -1,
+    insuficiente: 0,
+    aceptable: 1,
+    bueno: 2,
+    excelente: 3,
+    formidable: 4,
+    destacado: 5,
+    brillante: 6,
+    magnifico: 7,
+    clase_mundial: 8,
+    sobrenatural: 9,
+    titanico: 10,
+    extraterrestre: 11,
+    mitico: 12,
+    magico: 13,
+    utopico: 14,
+    divino: 15
 };
 
-const factores = {
-    forma: {
-        excelente: 5,
-        bueno: 3,
-        aceptable: 1,
-        insuficiente: 0,
-        debil: -1,
-        horrible: -3
-    },
-    resistencia: 1.5, // Ajusta según el impacto deseado
-    edad: {
-        menos_de_28: 1,
-        mas_de_28: 0.9 // Reducción del 10% por cada año sobre los 28 años
-    }
-};
+// Función para cargar las opciones en los select
+function cargarOpciones() {
+    const selects = document.querySelectorAll('select');
 
+    selects.forEach(select => {
+        // Limpiar opciones existentes
+        select.innerHTML = '';
+
+        // Agregar opción inicial
+        const optionInicial = document.createElement('option');
+        optionInicial.value = '';
+        optionInicial.textContent = '--------';
+        select.appendChild(optionInicial);
+
+        // Agregar opciones de habilidades
+        Object.keys(habilidades).forEach(habilidad => {
+            const option = document.createElement('option');
+            option.value = habilidad;
+            option.textContent = habilidad.charAt(0).toUpperCase() + habilidad.slice(1); // Capitalizar primera letra
+            select.appendChild(option);
+        });
+    });
+}
+
+// Llamar a la función para cargar opciones cuando se cargue la página
+document.addEventListener('DOMContentLoaded', cargarOpciones);
+
+// Evento para calcular el TSI cuando se envía el formulario
 document.getElementById('formulario').addEventListener('submit', function(e) {
     e.preventDefault();
+    
+    // Obtener valores seleccionados
     const datos = {
         velocidad: document.getElementById('velocidad').value,
         resistencia: document.getElementById('resistencia').value,
@@ -52,31 +67,23 @@ document.getElementById('formulario').addEventListener('submit', function(e) {
         edad: document.getElementById('edad').value
     };
 
- console.log(datos); // Verifica los datos ingresados por el usuario
+    // Calcular el TSI
+    let tsi = 0;
+    let contador = 0;
 
-// Calcular el TSI
-let tsi = habilidades[datos.velocidad] +
-          habilidades[datos.resistencia] +
-          habilidades[datos.tecnica] +
-          habilidades[datos.defensa] +
-          habilidades[datos.ataque] +
-          habilidades[datos.pase] +
-          habilidades[datos.porteria];
+    Object.keys(datos).forEach(key => {
+        const valor = datos[key];
+        if (valor !== '') {
+            tsi += habilidades[valor];
+            contador++;
+        }
+    });
 
-console.log("TSI base:", tsi); // Verifica el valor base antes de aplicar los factores
+    // Calcular promedio
+    if (contador > 0) {
+        tsi /= contador;
+    }
 
-// Aplicar factores adicionales
-tsi += factores.forma[datos.forma]; // Suma el factor de forma
-tsi *= factores.resistencia; // Multiplica por el factor de resistencia
-
-console.log("TSI después de forma y resistencia:", tsi); // Verifica el TSI después de aplicar forma y resistencia
-
-// Ajuste por edad
-if (datos.edad === 'mas_de_28') {
-    tsi *= factores.edad.mas_de_28; // Reduce el TSI por edad
-}
-
-console.log("TSI final:", tsi); // Verifica el TSI final antes de mostrarlo
-
-// Mostrar el resultado en la página
-document.getElementById('resultado').innerText = `TSI Estimado: ${tsi.toFixed(2)}`;
+    // Mostrar resultado
+    document.getElementById('resultado').innerText = `TSI Estimado: ${tsi.toFixed(2)}`;
+});
