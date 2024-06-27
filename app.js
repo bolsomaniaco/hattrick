@@ -49,13 +49,10 @@ document.getElementById('formulario').addEventListener('submit', function(e) {
         pase: document.getElementById('pase').value,
         porteria: document.getElementById('porteria').value,
         forma: document.getElementById('forma').value,
-        experiencia: document.getElementById('experiencia').value,
-        confianza: document.getElementById('confianza').value,
-        estado: document.getElementById('estado').value,
         edad: document.getElementById('edad').value
     };
 
-    // Calcular el TSI
+   // Calcular el TSI
     let tsi = habilidades[datos.velocidad] +
               habilidades[datos.resistencia] +
               habilidades[datos.tecnica] +
