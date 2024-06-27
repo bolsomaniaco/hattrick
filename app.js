@@ -38,11 +38,9 @@ const factores = {
     }
 };
 
-// Capturar el evento de envío del formulario
 document.getElementById('formulario').addEventListener('submit', function(e) {
-    e.preventDefault(); // Prevenir el envío del formulario por defecto
+    e.preventDefault();
 
-    // Obtener valores seleccionados
     const datos = {
         velocidad: document.getElementById('velocidad').value,
         resistencia: document.getElementById('resistencia').value,
@@ -54,14 +52,14 @@ document.getElementById('formulario').addEventListener('submit', function(e) {
         forma: document.getElementById('forma').value,
         edad: document.getElementById('edad').value
     };
-    
-    // Verificar si algún campo está vacío o no seleccionado
+
+    console.log("Datos capturados:", datos);
+
     if (Object.values(datos).some(valor => valor === "")) {
         alert("Por favor, selecciona un valor para todas las características.");
-        return; // Detener la ejecución si hay campos vacíos
+        return;
     }
 
-    // Calcular el TSI
     let tsi = habilidades[datos.velocidad] +
               habilidades[datos.resistencia] +
               habilidades[datos.tecnica] +
@@ -70,17 +68,15 @@ document.getElementById('formulario').addEventListener('submit', function(e) {
               habilidades[datos.pase] +
               habilidades[datos.porteria];
 
-    // Aplicar factores adicionales
-    tsi += factores.forma[datos.forma]; // Suma el factor de forma
-    tsi *= factores.resistencia; // Multiplica por el factor de resistencia
+    tsi += factores.forma[datos.forma];
+    tsi *= factores.resistencia;
 
-    // Ajuste por edad
     if (datos.edad === 'mas_de_28') {
-        tsi *= factores.edad.mas_de_28; // Reduce el TSI por edad
+        tsi *= factores.edad.mas_de_28;
     } else {
-        tsi *= factores.edad.menos_de_28; // Ajuste por edad menor de 28
+        tsi *= factores.edad.menos_de_28;
     }
 
-    // Mostrar el resultado en la página
     document.getElementById('resultado').innerText = `TSI Estimado: ${tsi.toFixed(2)}`;
 });
+
