@@ -1,3 +1,22 @@
-body {
-    font-family: Arial, sans-serif;
+/* Estilos para los grupos */
+.grupo {
+    margin-bottom: 20px; /* Espacio entre grupos */
+}
+
+.grupo h3 {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.grupo label, .grupo select {
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* Estilos opcionales para mejorar la separación visual */
+.grupo {
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
 }
