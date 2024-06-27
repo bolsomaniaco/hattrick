@@ -1,318 +1,270 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simulador de Características de Jugadores</title>
-</head>
-<body>
-    <h1>Simulador de Características de Jugadores</h1>
-    <form id="formulario">
-        <label for="velocidad">Velocidad:</label>
-        <select id="velocidad" name="velocidad">
-            <option value="divino">Divino</option>
-            <option value="utopico">Utópico</option>
-            <option value="magico">Mágico</option>
-            <option value="mitico">Mítico</option>
-            <option value="extraterrestre">Extraterrestre</option>
-            <option value="titanico">Titánico</option>
-            <option value="sobrenatural">Sobrenatural</option>
-            <option value="clase_mundial">Clase Mundial</option>
-            <option value="magnifico">Magnífico</option>
-            <option value="brillante">Brillante</option>
-            <option value="destacado">Destacado</option>
-            <option value="formidable">Formidable</option>
-            <option value="excelente">Excelente</option>
-            <option value="bueno">Bueno</option>
-            <option value="aceptable">Aceptable</option>
-            <option value="insuficiente">Insuficiente</option>
-            <option value="debil">Débil</option>
-            <option value="pobre">Pobre</option>
-            <option value="horrible">Horrible</option>
-            <option value="desastroso">Desastroso</option>
-            <option value="nulo">Nulo</option>
-        </select><br><br>
-
+<form id="formulario">
+    <div class="grupo">
+        <h3>Grupo 1</h3>
         <label for="resistencia">Resistencia:</label>
         <select id="resistencia" name="resistencia">
-            <option value="divino">Divino</option>
-            <option value="utopico">Utópico</option>
-            <option value="magico">Mágico</option>
-            <option value="mitico">Mítico</option>
-            <option value="extraterrestre">Extraterrestre</option>
-            <option value="titanico">Titánico</option>
-            <option value="sobrenatural">Sobrenatural</option>
-            <option value="clase_mundial">Clase Mundial</option>
-            <option value="magnifico">Magnífico</option>
-            <option value="brillante">Brillante</option>
-            <option value="destacado">Destacado</option>
-            <option value="formidable">Formidable</option>
-            <option value="excelente">Excelente</option>
-            <option value="bueno">Bueno</option>
-            <option value="aceptable">Aceptable</option>
-            <option value="insuficiente">Insuficiente</option>
-            <option value="debil">Débil</option>
-            <option value="pobre">Pobre</option>
-            <option value="horrible">Horrible</option>
-            <option value="desastroso">Desastroso</option>
-            <option value="nulo">Nulo</option>
-        </select><br><br>
+<option value="divino">Divino</option>
+<option value="utopico">Utópico</option>
+<option value="magico">Mágico</option>
+<option value="mitico">Mítico</option>
+<option value="extraterrestre">Extraterrestre</option>
+<option value="titanico">Titánico</option>
+<option value="sobrenatural">Sobrenatural</option>
+<option value="clase_mundial">Clase Mundial</option>
+<option value="magnifico">Magnífico</option>
+<option value="brillante">Brillante</option>
+<option value="destacado">Destacado</option>
+<option value="formidable">Formidable</option>
+<option value="excelente">Excelente</option>
+<option value="bueno">Bueno</option>
+<option value="aceptable">Aceptable</option>
+<option value="insuficiente">Insuficiente</option>
+<option value="debil">Débil</option>
+<option value="pobre">Pobre</option>
+<option value="horrible">Horrible</option>
+<option value="desastroso">Desastroso</option>
+<option value="nulo">Nulo</option>
 
-        <label for="tecnica">Técnica:</label>
-        <select id="tecnica" name="tecnica">
-            <option value="divino">Divino</option>
-            <option value="utopico">Utópico</option>
-            <option value="magico">Mágico</option>
-            <option value="mitico">Mítico</option>
-            <option value="extraterrestre">Extraterrestre</option>
-            <option value="titanico">Titánico</option>
-            <option value="sobrenatural">Sobrenatural</option>
-            <option value="clase_mundial">Clase Mundial</option>
-            <option value="magnifico">Magnífico</option>
-            <option value="brillante">Brillante</option>
-            <option value="destacado">Destacado</option>
-            <option value="formidable">Formidable</option>
-            <option value="excelente">Excelente</option>
-            <option value="bueno">Bueno</option>
-            <option value="aceptable">Aceptable</option>
-            <option value="insuficiente">Insuficiente</option>
-            <option value="debil">Débil</option>
-            <option value="pobre">Pobre</option>
-            <option value="horrible">Horrible</option>
-            <option value="desastroso">Desastroso</option>
-            <option value="nulo">Nulo</option>
-        </select><br><br>
-
-        <label for="defensa">Defensa:</label>
-        <select id="defensa" name="defensa">
-            <option value="divino">Divino</option>
-            <option value="utopico">Utópico</option>
-            <option value="magico">Mágico</option>
-            <option value="mitico">Mítico</option>
-            <option value="extraterrestre">Extraterrestre</option>
-            <option value="titanico">Titánico</option>
-            <option value="sobrenatural">Sobrenatural</option>
-            <option value="clase_mundial">Clase Mundial</option>
-            <option value="magnifico">Magnífico</option>
-            <option value="brillante">Brillante</option>
-            <option value="destacado">Destacado</option>
-            <option value="formidable">Formidable</option>
-            <option value="excelente">Excelente</option>
-            <option value="bueno">Bueno</option>
-            <option value="aceptable">Aceptable</option>
-            <option value="insuficiente">Insuficiente</option>
-            <option value="debil">Débil</option>
-            <option value="pobre">Pobre</option>
-            <option value="horrible">Horrible</option>
-            <option value="desastroso">Desastroso</option>
-            <option value="nulo">Nulo</option>
-        </select><br><br>
-
-        <label for="ataque">Ataque:</label>
-        <select id="ataque" name="ataque">
-            <option value="divino">Divino</option>
-            <option value="utopico">Utópico</option>
-            <option value="magico">Mágico</option>
-            <option value="mitico">Mítico</option>
-            <option value="extraterrestre">Extraterrestre</option>
-            <option value="titanico">Titánico</option>
-            <option value="sobrenatural">Sobrenatural</option>
-            <option value="clase_mundial">Clase Mundial</option>
-            <option value="magnifico">Magnífico</option>
-            <option value="brillante">Brillante</option>
-            <option value="destacado">Destacado</option>
-            <option value="formidable">Formidable</option>
-            <option value="excelente">Excelente</option>
-            <option value="bueno">Bueno</option>
-            <option value="aceptable">Aceptable</option>
-            <option value="insuficiente">Insuficiente</option>
-            <option value="debil">Débil</option>
-            <option value="pobre">Pobre</option>
-            <option value="horrible">Horrible</option>
-            <option value="desastroso">Desastroso</option>
-            <option value="nulo">Nulo</option>
-        </select><br><br>
-
-        <label for="pase">Pase:</label>
-        <select id="pase" name="pase">
-            <option value="divino">Divino</option>
-            <option value="utopico">Utópico</option>
-            <option value="magico">Mágico</option>
-            <option value="mitico">Mítico</option>
-            <option value="extraterrestre">Extraterrestre</option>
-            <option value="titanico">Titánico</option>
-            <option value="sobrenatural">Sobrenatural</option>
-            <option value="clase_mundial">Clase Mundial</option>
-            <option value="magnifico">Magnífico</option>
-            <option value="brillante">Brillante</option>
-            <option value="destacado">Destacado</option>
-            <option value="formidable">Formidable</option>
-            <option value="excelente">Excelente</option>
-            <option value="bueno">Bueno</option>
-            <option value="aceptable">Aceptable</option>
-            <option value="insuficiente">Insuficiente</option>
-            <option value="debil">Débil</option>
-            <option value="pobre">Pobre</option>
-            <option value="horrible">Horrible</option>
-            <option value="desastroso">Desastroso</option>
-            <option value="nulo">Nulo</option>
-        </select><br><br>
-
-        <label for="porteria">Portería:</label>
-        <select id="porteria" name="porteria">
-            <option value="divino">Divino</option>
-            <option value="utopico">Utópico</option>
-            <option value="magico">Mágico</option>
-            <option value="mitico">Mítico</option>
-            <option value="extraterrestre">Extraterrestre</option>
-            <option value="titanico">Titánico</option>
-            <option value="sobrenatural">Sobrenatural</option>
-            <option value="clase_mundial">Clase Mundial</option>
-            <option value="magnifico">Magnífico</option>
-            <option value="brillante">Brillante</option>
-            <option value="destacado">Destacado</option>
-            <option value="formidable">Formidable</option>
-            <option value="excelente">Excelente</option>
-            <option value="bueno">Bueno</option>
-            <option value="aceptable">Aceptable</option>
-            <option value="insuficiente">Insuficiente</option>
-            <option value="debil">Débil</option>
-            <option value="pobre">Pobre</option>
-            <option value="horrible">Horrible</option>
-            <option value="desastroso">Desastroso</option>
-            <option value="nulo">Nulo</option>
-        </select><br><br>
-
+        </select>
+        
         <label for="forma">Forma:</label>
         <select id="forma" name="forma">
-               <option value="divino">Divino</option>
-            <option value="utopico">Utópico</option>
-            <option value="magico">Mágico</option>
-            <option value="mitico">Mítico</option>
-            <option value="extraterrestre">Extraterrestre</option>
-            <option value="titanico">Titánico</option>
-            <option value="sobrenatural">Sobrenatural</option>
-            <option value="clase_mundial">Clase Mundial</option>
-            <option value="magnifico">Magnífico</option>
-            <option value="brillante">Brillante</option>
-            <option value="destacado">Destacado</option>
-            <option value="formidable">Formidable</option>
-            <option value="excelente">Excelente</option>
-            <option value="bueno">Bueno</option>
-            <option value="aceptable">Aceptable</option>
-            <option value="insuficiente">Insuficiente</option>
-            <option value="debil">Débil</option>
-            <option value="pobre">Pobre</option>
-            <option value="horrible">Horrible</option>
-            <option value="desastroso">Desastroso</option>
-            <option value="nulo">Nulo</option>
-        </select><br><br>
+<option value="divino">Divino</option>
+<option value="utopico">Utópico</option>
+<option value="magico">Mágico</option>
+<option value="mitico">Mítico</option>
+<option value="extraterrestre">Extraterrestre</option>
+<option value="titanico">Titánico</option>
+<option value="sobrenatural">Sobrenatural</option>
+<option value="clase_mundial">Clase Mundial</option>
+<option value="magnifico">Magnífico</option>
+<option value="brillante">Brillante</option>
+<option value="destacado">Destacado</option>
+<option value="formidable">Formidable</option>
+<option value="excelente">Excelente</option>
+<option value="bueno">Bueno</option>
+<option value="aceptable">Aceptable</option>
+<option value="insuficiente">Insuficiente</option>
+<option value="debil">Débil</option>
+<option value="pobre">Pobre</option>
+<option value="horrible">Horrible</option>
+<option value="desastroso">Desastroso</option>
+<option value="nulo">Nulo</option>
 
+        </select>
+        
         <label for="experiencia">Experiencia:</label>
         <select id="experiencia" name="experiencia">
-            <option value="divino">Divino</option>
-            <option value="utopico">Utópico</option>
-            <option value="magico">Mágico</option>
-            <option value="mitico">Mítico</option>
-            <option value="extraterrestre">Extraterrestre</option>
-            <option value="titanico">Titánico</option>
-            <option value="sobrenatural">Sobrenatural</option>
-            <option value="clase_mundial">Clase Mundial</option>
-            <option value="magnifico">Magnífico</option>
-            <option value="brillante">Brillante</option>
-            <option value="destacado">Destacado</option>
-            <option value="formidable">Formidable</option>
-            <option value="excelente">Excelente</option>
-            <option value="bueno">Bueno</option>
-            <option value="aceptable">Aceptable</option>
-            <option value="insuficiente">Insuficiente</option>
-            <option value="debil">Débil</option>
-            <option value="pobre">Pobre</option>
-            <option value="horrible">Horrible</option>
-            <option value="desastroso">Desastroso</option>
-            <option value="nulo">Nulo</option>
-        </select><br><br>
+<option value="divino">Divino</option>
+<option value="utopico">Utópico</option>
+<option value="magico">Mágico</option>
+<option value="mitico">Mítico</option>
+<option value="extraterrestre">Extraterrestre</option>
+<option value="titanico">Titánico</option>
+<option value="sobrenatural">Sobrenatural</option>
+<option value="clase_mundial">Clase Mundial</option>
+<option value="magnifico">Magnífico</option>
+<option value="brillante">Brillante</option>
+<option value="destacado">Destacado</option>
+<option value="formidable">Formidable</option>
+<option value="excelente">Excelente</option>
+<option value="bueno">Bueno</option>
+<option value="aceptable">Aceptable</option>
+<option value="insuficiente">Insuficiente</option>
+<option value="debil">Débil</option>
+<option value="pobre">Pobre</option>
+<option value="horrible">Horrible</option>
+<option value="desastroso">Desastroso</option>
+<option value="nulo">Nulo</option>
 
-        <label for="confianza">Confianza:</label>
-        <select id="confianza" name="confianza">
-            <option value="divino">Divino</option>
-            <option value="utopico">Utópico</option>
-            <option value="magico">Mágico</option>
-            <option value="mitico">Mítico</option>
-            <option value="extraterrestre">Extraterrestre</option>
-            <option value="titanico">Titánico</option>
-            <option value="sobrenatural">Sobrenatural</option>
-            <option value="clase_mundial">Clase Mundial</option>
-            <option value="magnifico">Magnífico</option>
-            <option value="brillante">Brillante</option>
-            <option value="destacado">Destacado</option>
-            <option value="formidable">Formidable</option>
-            <option value="excelente">Excelente</option>
-            <option value="bueno">Bueno</option>
-            <option value="aceptable">Aceptable</option>
-            <option value="insuficiente">Insuficiente</option>
-            <option value="debil">Débil</option>
-            <option value="pobre">Pobre</option>
-            <option value="horrible">Horrible</option>
-            <option value="desastroso">Desastroso</option>
-            <option value="nulo">Nulo</option>
-        </select><br><br>
+        </select>
+    </div>
 
-        <label for="estado">Estado:</label>
-        <select id="estado" name="estado">
-            <option value="divino">Divino</option>
-            <option value="utopico">Utópico</option>
-            <option value="magico">Mágico</option>
-            <option value="mitico">Mítico</option>
-            <option value="extraterrestre">Extraterrestre</option>
-            <option value="titanico">Titánico</option>
-            <option value="sobrenatural">Sobrenatural</option>
-            <option value="clase_mundial">Clase Mundial</option>
-            <option value="magnifico">Magnífico</option>
-            <option value="brillante">Brillante</option>
-            <option value="destacado">Destacado</option>
-            <option value="formidable">Formidable</option>
-            <option value="excelente">Excelente</option>
-            <option value="bueno">Bueno</option>
-            <option value="aceptable">Aceptable</option>
-            <option value="insuficiente">Insuficiente</option>
-            <option value="debil">Débil</option>
-            <option value="pobre">Pobre</option>
-            <option value="horrible">Horrible</option>
-            <option value="desastroso">Desastroso</option>
-            <option value="nulo">Nulo</option>
-        </select><br><br>
+    <div class="grupo">
+        <h3>Grupo 2</h3>
+        <label for="porteria">Portería:</label>
+        <select id="porteria" name="porteria">
+<option value="divino">Divino</option>
+<option value="utopico">Utópico</option>
+<option value="magico">Mágico</option>
+<option value="mitico">Mítico</option>
+<option value="extraterrestre">Extraterrestre</option>
+<option value="titanico">Titánico</option>
+<option value="sobrenatural">Sobrenatural</option>
+<option value="clase_mundial">Clase Mundial</option>
+<option value="magnifico">Magnífico</option>
+<option value="brillante">Brillante</option>
+<option value="destacado">Destacado</option>
+<option value="formidable">Formidable</option>
+<option value="excelente">Excelente</option>
+<option value="bueno">Bueno</option>
+<option value="aceptable">Aceptable</option>
+<option value="insuficiente">Insuficiente</option>
+<option value="debil">Débil</option>
+<option value="pobre">Pobre</option>
+<option value="horrible">Horrible</option>
+<option value="desastroso">Desastroso</option>
+<option value="nulo">Nulo</option>
 
-        <label for="edad">Edad:</label>
-        <select id="edad" name="edad">
-            <option value="divino">Divino</option>
-            <option value="utopico">Utópico</option>
-            <option value="magico">Mágico</option>
-            <option value="mitico">Mítico</option>
-            <option value="extraterrestre">Extraterrestre</option>
-            <option value="titanico">Titánico</option>
-            <option value="sobrenatural">Sobrenatural</option>
-            <option value="clase_mundial">Clase Mundial</option>
-            <option value="magnifico">Magnífico</option>
-            <option value="brillante">Brillante</option>
-            <option value="destacado">Destacado</option>
-            <option value="formidable">Formidable</option>
-            <option value="excelente">Excelente</option>
-            <option value="bueno">Bueno</option>
-            <option value="aceptable">Aceptable</option>
-            <option value="insuficiente">Insuficiente</option>
-            <option value="debil">Débil</option>
-            <option value="pobre">Pobre</option>
-            <option value="horrible">Horrible</option>
-            <option value="desastroso">Desastroso</option>
-            <option value="nulo">Nulo</option>
-        </select><br><br>
+        </select>
         
-        <button type="submit">Estimar Características</button>
-    </form>
-    <p id="resultado"></p>
+        <label for="defensa">Defensa:</label>
+        <select id="defensa" name="defensa">
+<option value="divino">Divino</option>
+<option value="utopico">Utópico</option>
+<option value="magico">Mágico</option>
+<option value="mitico">Mítico</option>
+<option value="extraterrestre">Extraterrestre</option>
+<option value="titanico">Titánico</option>
+<option value="sobrenatural">Sobrenatural</option>
+<option value="clase_mundial">Clase Mundial</option>
+<option value="magnifico">Magnífico</option>
+<option value="brillante">Brillante</option>
+<option value="destacado">Destacado</option>
+<option value="formidable">Formidable</option>
+<option value="excelente">Excelente</option>
+<option value="bueno">Bueno</option>
+<option value="aceptable">Aceptable</option>
+<option value="insuficiente">Insuficiente</option>
+<option value="debil">Débil</option>
+<option value="pobre">Pobre</option>
+<option value="horrible">Horrible</option>
+<option value="desastroso">Desastroso</option>
+<option value="nulo">Nulo</option>
 
-    <script src="app.js"></script>
-</body>
-</html>
+        </select>
+        
+        <label for="jugadas">Jugadas:</label>
+        <select id="jugadas" name="jugadas">
+<option value="divino">Divino</option>
+<option value="utopico">Utópico</option>
+<option value="magico">Mágico</option>
+<option value="mitico">Mítico</option>
+<option value="extraterrestre">Extraterrestre</option>
+<option value="titanico">Titánico</option>
+<option value="sobrenatural">Sobrenatural</option>
+<option value="clase_mundial">Clase Mundial</option>
+<option value="magnifico">Magnífico</option>
+<option value="brillante">Brillante</option>
+<option value="destacado">Destacado</option>
+<option value="formidable">Formidable</option>
+<option value="excelente">Excelente</option>
+<option value="bueno">Bueno</option>
+<option value="aceptable">Aceptable</option>
+<option value="insuficiente">Insuficiente</option>
+<option value="debil">Débil</option>
+<option value="pobre">Pobre</option>
+<option value="horrible">Horrible</option>
+<option value="desastroso">Desastroso</option>
+<option value="nulo">Nulo</option>
 
+        </select>
+        
+        <label for="lateral">Lateral:</label>
+        <select id="lateral" name="lateral">
+<option value="divino">Divino</option>
+<option value="utopico">Utópico</option>
+<option value="magico">Mágico</option>
+<option value="mitico">Mítico</option>
+<option value="extraterrestre">Extraterrestre</option>
+<option value="titanico">Titánico</option>
+<option value="sobrenatural">Sobrenatural</option>
+<option value="clase_mundial">Clase Mundial</option>
+<option value="magnifico">Magnífico</option>
+<option value="brillante">Brillante</option>
+<option value="destacado">Destacado</option>
+<option value="formidable">Formidable</option>
+<option value="excelente">Excelente</option>
+<option value="bueno">Bueno</option>
+<option value="aceptable">Aceptable</option>
+<option value="insuficiente">Insuficiente</option>
+<option value="debil">Débil</option>
+<option value="pobre">Pobre</option>
+<option value="horrible">Horrible</option>
+<option value="desastroso">Desastroso</option>
+<option value="nulo">Nulo</option>
+
+        </select>
+        
+        <label for="pases">Pases:</label>
+        <select id="pases" name="pases">
+<option value="divino">Divino</option>
+<option value="utopico">Utópico</option>
+<option value="magico">Mágico</option>
+<option value="mitico">Mítico</option>
+<option value="extraterrestre">Extraterrestre</option>
+<option value="titanico">Titánico</option>
+<option value="sobrenatural">Sobrenatural</option>
+<option value="clase_mundial">Clase Mundial</option>
+<option value="magnifico">Magnífico</option>
+<option value="brillante">Brillante</option>
+<option value="destacado">Destacado</option>
+<option value="formidable">Formidable</option>
+<option value="excelente">Excelente</option>
+<option value="bueno">Bueno</option>
+<option value="aceptable">Aceptable</option>
+<option value="insuficiente">Insuficiente</option>
+<option value="debil">Débil</option>
+<option value="pobre">Pobre</option>
+<option value="horrible">Horrible</option>
+<option value="desastroso">Desastroso</option>
+<option value="nulo">Nulo</option>
+
+        </select>
+        
+        <label for="anotacion">Anotación:</label>
+        <select id="anotacion" name="anotacion">
+<option value="divino">Divino</option>
+<option value="utopico">Utópico</option>
+<option value="magico">Mágico</option>
+<option value="mitico">Mítico</option>
+<option value="extraterrestre">Extraterrestre</option>
+<option value="titanico">Titánico</option>
+<option value="sobrenatural">Sobrenatural</option>
+<option value="clase_mundial">Clase Mundial</option>
+<option value="magnifico">Magnífico</option>
+<option value="brillante">Brillante</option>
+<option value="destacado">Destacado</option>
+<option value="formidable">Formidable</option>
+<option value="excelente">Excelente</option>
+<option value="bueno">Bueno</option>
+<option value="aceptable">Aceptable</option>
+<option value="insuficiente">Insuficiente</option>
+<option value="debil">Débil</option>
+<option value="pobre">Pobre</option>
+<option value="horrible">Horrible</option>
+<option value="desastroso">Desastroso</option>
+<option value="nulo">Nulo</option>
+
+        </select>
+        
+        <label for="balon_parado">Balón Parado:</label>
+        <select id="balon_parado" name="balon_parado">
+<option value="divino">Divino</option>
+<option value="utopico">Utópico</option>
+<option value="magico">Mágico</option>
+<option value="mitico">Mítico</option>
+<option value="extraterrestre">Extraterrestre</option>
+<option value="titanico">Titánico</option>
+<option value="sobrenatural">Sobrenatural</option>
+<option value="clase_mundial">Clase Mundial</option>
+<option value="magnifico">Magnífico</option>
+<option value="brillante">Brillante</option>
+<option value="destacado">Destacado</option>
+<option value="formidable">Formidable</option>
+<option value="excelente">Excelente</option>
+<option value="bueno">Bueno</option>
+<option value="aceptable">Aceptable</option>
+<option value="insuficiente">Insuficiente</option>
+<option value="debil">Débil</option>
+<option value="pobre">Pobre</option>
+<option value="horrible">Horrible</option>
+<option value="desastroso">Desastroso</option>
+<option value="nulo">Nulo</option>
+
+        </select>
+    </div>
+
+    <button type="submit">Calcular TSI</button>
+</form>
+<div id="resultado"></div>
