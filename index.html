@@ -2,13 +2,42 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Tu página con Hattrick</title>
-    <script src="app.js"></script> <!-- Vincula tu archivo JavaScript -->
+    <title>Calculadora de TSI Hattrick</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Enlace al archivo CSS, opcional -->
 </head>
 <body>
-    <!-- Contenido de tu página aquí -->
+    <h1>Calculadora de TSI Hattrick</h1>
+
     <form id="formulario">
-        <!-- Campos del formulario y menús desplegables -->
+        <label for="velocidad">Velocidad:</label>
+        <select id="velocidad">
+            <option value="">Selecciona una opción</option>
+            <!-- Aquí van las opciones de velocidad -->
+        </select>
+        <br>
+
+        <!-- Agrega los otros campos similares aquí con menús desplegables -->
+        
+        <label for="forma">Forma:</label>
+        <select id="forma">
+            <option value="">Selecciona una opción</option>
+            <!-- Opciones de forma -->
+        </select>
+        <br>
+
+        <label for="edad">Edad:</label>
+        <select id="edad">
+            <option value="">Selecciona una opción</option>
+            <option value="menos_de_28">Menos de 28</option>
+            <option value="mas_de_28">Más de 28</option>
+        </select>
+        <br>
+
+        <button type="submit">Calcular TSI</button>
     </form>
+
+    <div id="resultado"></div>
+
+    <script src="app.js"></script> <!-- Enlace al archivo JavaScript -->
 </body>
 </html>
