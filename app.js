@@ -39,23 +39,20 @@ document.getElementById('formulario').addEventListener('submit', function(e) {
         edad: document.getElementById('edad').value
     };
 
-    // Calcular las características del jugador (ejemplo básico)
-    const sumaCaracteristicas = habilidades[datos.velocidad] +
-                                habilidades[datos.resistencia] +
-                                habilidades[datos.tecnica] +
-                                habilidades[datos.defensa] +
-                                habilidades[datos.ataque] +
-                                habilidades[datos.pase] +
-                                habilidades[datos.porteria] +
-                                habilidades[datos.forma] +
-                                habilidades[datos.experiencia] +
-                                habilidades[datos.confianza] +
-                                habilidades[datos.estado] +
-                                habilidades[datos.edad];
-
-    const promedioCaracteristicas = sumaCaracteristicas / 12; // 12 es el número total de características
-    const redondeado = Math.round(promedioCaracteristicas * 100) / 100; // Redondea el promedio a dos decimales
+    // Calcular el TSI (ejemplo simplificado)
+    const tsi = pesos[datos.velocidad] +
+                pesos[datos.resistencia] +
+                pesos[datos.tecnica] +
+                pesos[datos.defensa] +
+                pesos[datos.ataque] +
+                pesos[datos.pase] +
+                pesos[datos.porteria] +
+                pesos[datos.forma] +
+                pesos[datos.experiencia] +
+                pesos[datos.confianza] +
+                pesos[datos.estado] +
+                pesos[datos.edad];
 
     // Mostrar el resultado en la página
-    document.getElementById('resultado').innerText = `Promedio de Características: ${redondeado}`;
+    document.getElementById('resultado').innerText = `TSI Estimado: ${tsi}`;
 });
