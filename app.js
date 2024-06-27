@@ -22,6 +22,22 @@ const habilidades = {
     nulo: 0
 };
 
+const factores = {
+    forma: {
+        excelente: 5,
+        bueno: 3,
+        aceptable: 1,
+        insuficiente: 0,
+        debil: -1,
+        horrible: -3
+    },
+    resistencia: 1.5, // Ajusta según el impacto deseado
+    edad: {
+        menos_de_28: 1,
+        mas_de_28: 0.9 // Reducción del 10% por cada año sobre los 28 años
+    }
+};
+
 document.getElementById('formulario').addEventListener('submit', function(e) {
     e.preventDefault();
     const datos = {
